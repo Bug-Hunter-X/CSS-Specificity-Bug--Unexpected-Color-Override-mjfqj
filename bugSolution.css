@@ -1,0 +1,21 @@
+Several solutions exist to fix this issue:
+
+**1. Adjust the order of CSS rules:** Place the more specific rule *after* the less specific rule in your CSS file. This leverages the CSS cascading behavior to apply the later rule.
+
+**2. Increase specificity of the overridden rule:**  Make the `p` rule more specific by adding an extra selector such as:
+
+```css
+div > p {
+  color: red !important; 
+}
+```
+
+**3. Use the `!important` flag (use cautiously!):**   Use the `!important` flag to override the specificity. This is generally not recommended as it can lead to difficult-to-maintain CSS, but it can be used in specific situations:
+
+```css
+p {
+  color: red !important;
+}
+```
+
+The `bugSolution.css` demonstrates option 1.  Remember to choose the best solution based on your specific project and coding style.  Avoid using `!important` unless absolutely necessary.
