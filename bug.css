@@ -1,0 +1,12 @@
+The following CSS rule creates an unexpected layout issue because of specificity:
+
+```css
+div p {
+  color: blue;
+}
+p {
+  color: red;
+}
+```
+
+The `div p` rule is more specific and overrides the `p` rule, resulting in the text inside a `<div>` having blue color instead of the expected red color.  This is an uncommon error because it's a subtle issue related to CSS specificity.
